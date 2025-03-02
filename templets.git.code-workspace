@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../templets.git"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "massively"
+	}
+}
