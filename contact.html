@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Contact - MBONGENI NSINGO</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/contact.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+		<div id="wrapper">
+			<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="logo">MBONGENI NSINGO</a>
+			</header>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="index.html">PROFILE</a></li>
+					<li><a href="index.html#education">EDUCATION</a></li>
+					<li><a href="index.html#skills">SKILLS</a></li>
+					<li><a href="index.html#projects-showcase">PROJECTS</a></li>
+					<li class="active"><a href="contact.html">CONTACT</a></li>
+				</ul>
+				<ul class="icons">
+					<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="https://www.facebook.com/profile.php?id=100078032067756" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="https://www.linkedin.com/in/mbongeni-nsingo-456912291" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+					<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+				</ul>
+			</nav>
+
+			<!-- Main -->
+			<div id="main">
+				<section class="contact-page">
+					<div class="contact-container">
+						<div class="contact-header">
+							<h1>Get in Touch</h1>
+							<p>I'm always interested in hearing about new opportunities, collaborations, and exciting projects. Feel free to reach out!</p>
+						</div>
+
+						<div class="row">
+							<!-- Contact Information -->
+							<div class="col-lg-4">
+								<div class="contact-info-card text-center">
+									<i class="fas fa-map-marker-alt"></i>
+									<h3>Location</h3>
+									<p>Midlands State University<br>Senga Road, Gweru<br>Zimbabwe</p>
+								</div>
+								<div class="contact-info-card text-center">
+									<i class="fas fa-phone"></i>
+									<h3>Phone</h3>
+									<p>0713630190<br>0779974493</p>
+								</div>
+								<div class="contact-info-card text-center">
+									<i class="fas fa-envelope"></i>
+									<h3>Email</h3>
+									<p>mbongeninsingo84@gmail.com</p>
+								</div>
+							</div>
+
+							<!-- Contact Form -->
+							<div class="col-lg-8">
+								<div class="contact-form">
+									<div class="direct-email-section" style="text-align: center; padding: 3rem; background: #f8f9fa; border-radius: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+										<h3 style="margin-bottom: 1.5rem;">Send Me a Message</h3>
+										<p style="font-size: 1.1rem; margin-bottom: 2rem;">
+											Click the button below to open your email client and send me a message directly.
+										</p>
+										<a href="mailto:mbongeninsingo@gmail.com?subject=Contact from Portfolio Website" class="button large" style="background: linear-gradient(45deg, #2c3e50, #3498db); color: white; padding: 1rem 2rem; border-radius: 30px; text-decoration: none; display: inline-block; transition: transform 0.3s ease;">
+											<i class="fas fa-envelope" style="margin-right: 10px;"></i> Send Email
+										</a>
+										
+										<div class="alternative-contact" style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #ddd;">
+											<h4 style="margin-bottom: 1rem;">Alternative Contact Methods</h4>
+											<div class="social-links" style="display: flex; justify-content: center; gap: 1.5rem;">
+												<a href="https://www.linkedin.com/in/mbongeni-nsingo-456912291" class="icon brands fa-linkedin-in" style="font-size: 1.5rem; color: #0077b5;"></a>
+												<a href="https://www.facebook.com/profile.php?id=100078032067756" class="icon brands fa-facebook-f" style="font-size: 1.5rem; color: #1877f2;"></a>
+												<a href="#" class="icon brands fa-twitter" style="font-size: 1.5rem; color: #1da1f2;"></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Social Links -->
+						<div class="social-links">
+							<a href="#"><i class="fab fa-twitter"></i></a>
+							<a href="https://www.facebook.com/profile.php?id=100078032067756"><i class="fab fa-facebook-f"></i></a>
+							<a href="https://www.linkedin.com/in/mbongeni-nsingo-456912291"><i class="fab fa-linkedin-in"></i></a>
+							<a href="https://github.com/mboecreator"><i class="fab fa-github"></i></a>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<!-- Scripts -->
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('#contactForm').on('submit', function(e) {
+					e.preventDefault();
+					
+					$.ajax({
+						type: 'POST',
+						url: 'send_email.php',
+						data: $(this).serialize(),
+						dataType: 'json',
+						success: function(response) {
+							$('#formMessage').html(response.message)
+								.removeClass('alert-danger alert-success')
+								.addClass(response.success ? 'alert-success' : 'alert-danger')
+								.show();
+							
+							if (response.success) {
+								$('#contactForm')[0].reset();
+							}
+						},
+						error: function() {
+							$('#formMessage').html('An error occurred. Please try again later.')
+								.removeClass('alert-success')
+								.addClass('alert-danger')
+								.show();
+						}
+					});
+				});
+			});
+		</script>
+	</body>
+</html> 
