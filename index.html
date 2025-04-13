@@ -1,322 +1,753 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>My Best website</title>
+		<title>MBONGENI NSINGO - Data Science Student</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.footer {
+				background-color: #ffffff !important;
+				padding: 80px 0;
+				color: #212529;
+				margin-top: 4rem;
+			}
+
+			.footer .container {
+				padding: 0 15px;
+			}
+
+			.footer-box {
+				padding: 2rem;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.footer-heading {
+				font-size: 1.35rem;
+				font-weight: 700;
+				margin-bottom: 2rem;
+				color: #212529;
+				position: relative;
+				padding-bottom: 1rem;
+				text-transform: uppercase;
+				letter-spacing: 1.5px;
+				text-align: center;
+				width: 100%;
+			}
+
+			.footer-heading::after {
+				content: '';
+				position: absolute;
+				left: 50%;
+				bottom: 0;
+				width: 60px;
+				height: 3px;
+				background: linear-gradient(90deg, #0d6efd, #0099ff);
+				transform: translateX(-50%);
+				border-radius: 3px;
+			}
+
+			.contact-info {
+				width: 100%;
+				max-width: 320px;
+			}
+
+			.contact-info p {
+				color: #495057;
+				margin-bottom: 1.25rem;
+				font-size: 0.95rem;
+				line-height: 1.6;
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+			}
+
+			.contact-info p i {
+				color: #0d6efd;
+				font-size: 1.2rem;
+				min-width: 24px;
+				text-align: center;
+			}
+
+			.contact-info p span {
+				flex: 1;
+			}
+
+			.social-links {
+				display: flex;
+				gap: 1rem;
+				margin-top: auto;
+			}
+
+			.social-btn {
+				color: #6c757d;
+				text-decoration: none;
+				transition: all 0.3s ease;
+				font-size: 1.1rem;
+			}
+
+			.social-btn:hover {
+				color: #8a4baf;
+			}
+
+			.footer-links {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				width: 100%;
+				text-align: center;
+			}
+
+			.footer-links li {
+				margin-bottom: 1.25rem;
+			}
+
+			.footer-links a {
+				color: #495057;
+				text-decoration: none;
+				transition: all 0.3s ease;
+				display: inline-block;
+				font-size: 1rem;
+				position: relative;
+				padding: 0.5rem 1rem;
+				border-radius: 5px;
+			}
+
+			.footer-links a:hover {
+				color: #0d6efd;
+				background-color: #e8f3ff;
+				transform: translateX(5px);
+			}
+
+			.footer-form {
+				width: 100%;
+			}
+
+			.footer-form .form-control {
+				background-color: #ffffff;
+				border: 1px solid #e0e0e0;
+				padding: 1rem;
+				margin-bottom: 1rem;
+				border-radius: 5px;
+				font-size: 0.95rem;
+			}
+
+			.footer-form .form-control:focus {
+				box-shadow: none;
+				border-color: #8a4baf;
+			}
+
+			.footer-form textarea.form-control {
+				min-height: 120px;
+				resize: vertical;
+			}
+
+			.btn-submit {
+				background: #8a4baf;
+				color: #ffffff;
+				padding: 1rem 2.5rem;
+				border: none;
+				border-radius: 5px;
+				font-weight: 500;
+				transition: all 0.3s ease;
+				width: auto;
+			}
+
+			.btn-submit:hover {
+				background: #7a3d9c;
+				transform: translateY(-2px);
+			}
+
+			.contact-info-box {
+				padding-left: 3rem;
+			}
+
+			.contact-name {
+				font-size: 1.75rem;
+				font-weight: 700;
+				margin-bottom: 0.5rem;
+				color: #212529;
+			}
+
+			.contact-title {
+				color: #6c757d;
+				font-size: 1rem;
+				margin-bottom: 2rem;
+			}
+
+			.contact-details {
+				margin-bottom: 2rem;
+			}
+
+			.contact-item {
+				margin-bottom: 1.5rem;
+			}
+
+			.contact-item h6 {
+				color: #6c757d;
+				font-size: 0.9rem;
+				margin-bottom: 0.5rem;
+			}
+
+			.contact-item p {
+				color: #212529;
+				font-size: 1rem;
+				margin-bottom: 0;
+			}
+
+			.copyright {
+				background-color: #f1f3f5;
+				padding: 1.5rem 0;
+				margin-top: 4rem;
+				border-top: 1px solid #dee2e6;
+			}
+
+			.copyright p {
+				margin: 0;
+				color: #6c757d;
+				font-size: 0.95rem;
+				font-weight: 500;
+			}
+
+			@media (max-width: 991px) {
+				.contact-info-box {
+					padding-left: 2rem;
+					margin-top: 3rem;
+				}
+				
+				.footer {
+					padding: 50px 0;
+				}
+			}
+
+			@media (max-width: 767px) {
+				.contact-info-box {
+					padding-left: 0;
+				}
+				
+				.footer .container {
+					padding: 0 20px;
+				}
+			}
+
+			#footer {
+				background-color: #2e3141;
+				background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
+				background-size: auto, cover;
+				background-position: center, center;
+				margin-top: -6.5em;
+				padding-top: 6.5em;
+			}
+
+			#footer .inner {
+				padding: 5em 0 3em 0;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				margin: 0 auto;
+				width: 55em;
+			}
+
+			#footer .inner > * {
+				width: 100%;
+			}
+
+			#footer .inner form {
+				margin: 0 3em 0 0;
+				width: calc(50% - 1.5em);
+			}
+
+			#footer .inner .contact {
+				width: calc(50% - 1.5em);
+			}
+
+			#footer .inner .copyright {
+				border-top: solid 2px rgba(255, 255, 255, 0.125);
+				list-style: none;
+				margin: 4em 0 2em 0;
+				padding: 2em 0 0 0;
+				width: 100%;
+			}
+
+			#footer .inner .copyright li {
+				border-left: solid 2px rgba(255, 255, 255, 0.125);
+				color: rgba(255, 255, 255, 0.35);
+				display: inline-block;
+				font-size: 0.9em;
+				line-height: 1;
+				margin-left: 1em;
+				padding: 0;
+				padding-left: 1em;
+			}
+
+			#footer .inner .copyright li:first-child {
+				border-left: 0;
+				margin-left: 0;
+				padding-left: 0;
+			}
+
+			#footer .inner .copyright li a {
+				color: inherit;
+			}
+
+			#footer h2.major {
+				border-bottom: solid 2px rgba(255, 255, 255, 0.125);
+				font-size: 2em;
+				margin-bottom: 0.8em;
+				padding-bottom: 0.4em;
+				color: #ffffff;
+			}
+
+			#footer form .field {
+				margin-bottom: 1.5em;
+			}
+
+			#footer form label {
+				color: #ffffff;
+				display: block;
+				font-size: 0.9em;
+				font-weight: 600;
+				margin: 0 0 1em 0;
+			}
+
+			#footer form input[type="text"],
+			#footer form input[type="email"],
+			#footer form textarea {
+				background: rgba(255, 255, 255, 0.025);
+				border: solid 2px rgba(255, 255, 255, 0.125);
+				border-radius: 5px;
+				color: inherit;
+				display: block;
+				outline: 0;
+				padding: 0.75em 1em;
+				text-decoration: none;
+				width: 100%;
+			}
+
+			#footer form input[type="submit"] {
+				background-color: #4c5c96;
+				border: 0;
+				border-radius: 5px;
+				color: #ffffff;
+				cursor: pointer;
+				display: inline-block;
+				font-size: 0.9em;
+				font-weight: 600;
+				height: 2.75em;
+				letter-spacing: 0.1em;
+				padding: 0 1.5em;
+				text-align: center;
+				text-decoration: none;
+				text-transform: uppercase;
+				white-space: nowrap;
+			}
+
+			#footer .contact li {
+				padding-left: 3em;
+				margin: 1.5em 0;
+				position: relative;
+				list-style: none;
+			}
+
+			#footer .contact li:before {
+				position: absolute;
+				left: 0;
+				top: 0;
+				font-size: 1.1em;
+			}
+
+			@media screen and (max-width: 980px) {
+				#footer .inner {
+					padding: 3em 3em 1em 3em;
+					display: block;
+					width: 100%;
+				}
+
+				#footer .inner form,
+				#footer .inner .contact {
+					width: 100%;
+					margin: 0 0 4em 0;
+				}
+			}
+
+			@media screen and (max-width: 736px) {
+				#footer {
+					margin-top: -2.5em;
+					padding-top: 2.5em;
+				}
+
+				#footer .inner {
+					padding: 2em 2em 0.1em 2em;
+				}
+			}
+
+			@media screen and (max-width: 480px) {
+				#footer .inner .copyright li {
+					display: block;
+					margin: 1em 0 0 0;
+					padding-left: 0;
+					border-left: 0;
+				}
+
+				#footer .inner .copyright li:first-child {
+					margin-top: 0;
+				}
+			}
+		</style>
 	</head>
 	<body class="is-preload">
-			<!-- Intro -->
-			<!-- <div id="intro">
-				<h1>Welcome to My Programming Journey</h1>
-				<p>Hi, I'm [Your Name], a passionate programmer dedicated to continuous learning and innovation. This website is a reflection of my journey in the tech world, where I share insights, projects, and the lessons I've learned along the way. Join me as I explore the fascinating world of programming!</p>
-				<ul class="actions">
-					<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Discover More</a></li>
-				</ul>
-			</div> -->
 		<!-- Wrapper -->
 			<div id="wrapper" class="fade-in">
-
 				<!-- Intro -->
 					<div id="intro">
-						<h1>Welcome to My Programming Journey</h1>
-						<p>Hi, I'm [Your Name], a passionate programmer dedicated to continuous learning and innovation. This website is a reflection of my journey in the tech world, where I share insights, projects, and the lessons I've learned along the way. Join me as I explore the fascinating world of programming!</p>
+				<h1>MBONGENI NSINGO</h1>
+				<p>Data Science Student | Midlands State University</p>
 						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+					<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">View My Profile</a></li>
 						</ul>
 					</div>
 
 				<!-- Header -->
 					<header id="header">
-						<a href="index.html" class="logo">CodeVibes</a>
+				<a href="index.html" class="logo">Student Portfolio</a>
 					</header>
 
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li class="active"><a href="index.html">HOME</a></li>
-							<li><a href="generic.html">RESOURCES</a></li>
-							<li><a href="#footer">CONTACT</a></li>
+					<li class="active"><a href="index.html">PROFILE</a></li>
+					<li><a href="#education">EDUCATION</a></li>
+					<li><a href="skills.html">SKILLS</a></li>
+					<li><a href="#projects-showcase">PROJECTS</a></li>
+					<li><a href="#about">ABOUT</a></li>
+					<li><a href="contact.html">CONTACT</a></li>
 						</ul>
 						<ul class="icons">
 							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 							<li><a href="https://www.facebook.com/profile.php?id=100078032067756" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="https://media.licdn.com/dms/image/v2/D4D03AQEUfIz71xf1ZA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1728977381381?e=1734566400&v=beta&t=xnOoTNgVqmSqHMZbrplrykmzhRes2ZaQPELdj4pmv1k" class="icon brands fa-linkedin-in"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.linkedin.com/in/mbongeni-nsingo-456912291" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/mboecreator" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 						</ul>
 					</nav>
 
 				<!-- Main -->
 					<div id="main">
-
 						<!-- Featured Post -->
 							<article class="post featured">
 								<header class="major">
-									<span class="date">October 15, 2024</span>
-									<h2><a href="#header">Explore the World <br> of Programming</a></h2>
-									<p>As a dedicated programmer, I'm committed to continuous learning <br>
-										and growth. My website is a reflection of my journey, where I share <br>
-										my knowledge and experience in [Python, Java, JavaScript, Machine Learning, <br>
-										 Artificial Intelligence, PowerBI, MongoDB, AWS, and Azure]. From <br>
-										[specific projects or achievements] to [other relevant experiences], <br> 
-										I'm proud to showcase my skills and demonstrate my ability to adapt <br>
-										to new challenges and technologies.</p>
+						<h2>Student Profile</h2>
+						<p>I am a passionate Data Science student at Midlands State University, dedicated to mastering the art of data analysis, machine learning, and artificial intelligence. 
+						With a strong foundation in mathematics and programming, I am developing the skills necessary to extract meaningful insights from complex datasets. 
+						My academic journey is focused on understanding the intersection of technology and data-driven decision making, preparing me for a future in the rapidly evolving field of data science.</p>
 								</header>
-								<a href="#" class="image main"><img src="images/image2.webp" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="#" class="button large">Full Story</a></li>
-								</ul>
-							</article>
+					<a href="#" class="image main"><img src="images/image2.webp" alt="Student Profile" /></a>
+						
+				
 
-						<!-- Posts -->
-							<section class="posts">
+
+
+
+
+				<!-- Education Section -->
+				<section id="education" class="posts">
 								<article>
 									<header>
-										<span class="date">January 10, 2024</span>
-										<h2><a href="#">Innovating with <br> AI in <br> Everyday Life</a></h2>
+							<h2>Education</h2>
 									</header>
-									<a href="#" class="image fit"><img src="images/robot.webp" alt="AI in Everyday Life" /></a>
-									<p>In my journey as a programmer, I have always been fascinated by the potential of Artificial Intelligence. I embarked on a project to create a personal assistant that helps with daily tasks, from scheduling to reminders. This experience not only honed my programming skills but also deepened my understanding of user experience design. I learned how to make technology more accessible and beneficial for everyone.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
+						
+						<div class="education-list">
+							<div class="education-item">
+								<h3>Midlands State University</h3>
+								<p class="degree-info">Bachelor of Commerce Honours in Data Science and Informatics <span class="date-range">| 2023 - Present</span></p>
+								
+								<div class="education-details">
+									<ul style="list-style-type: none;">
+										<li><strong>Current GPA:</strong> "In progress (Expected 2027)" (if still studying)</li>
+										<li><strong>Expected Graduation:</strong> December 2027</li>
+										<li><strong>Key Coursework:</strong> 
+											<ul class="coursework-list">
+												<li>Advanced Data Structures &amp; Algorithms</li>
+												<li>Machine Learning &amp; AI Fundamentals</li>
+												<li>Statistical Analysis &amp; Probability</li>
+												<li>Database Systems &amp; Management</li>
+												<li>Data Visualization Techniques</li>
+												<li>Python &amp; R Programming</li>
+												<li>Website Development</li>
+												<li>Big Data Analytics</li>
 									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">February 20, 2024</span>
-										<h2><a href="#">Mastering Data Visualization<br />with PowerBI</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/powerbi.jpg" alt="Data Visualization" /></a>
-									<p>Data is everywhere, but making sense of it can be challenging. I took on the task of mastering PowerBI to create insightful dashboards that help businesses make informed decisions. Through this project, I learned how to transform raw data into compelling visual stories, making complex information easy to understand and actionable.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
+										</li>
+										<li><strong>Achievements:</strong> Dean's List (2023), Data Science Club Member</li>
 									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">March 15, 2024</span>
-										<h2><a href="#">Exploring Cloud Computing<br />with AWS and Azure</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/cloud.jpg" alt="Cloud Computing" /></a>
-									<p>As I delved into the world of cloud computing, I realized its transformative power for businesses. I explored both AWS and Azure, learning how to deploy applications and manage resources efficiently. This journey not only improved my technical skills but also taught me the importance of scalability and flexibility in modern software development.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">April 5, 2024</span>
-										<h2><a href="#">Building Real-World Applications<br />with JavaScript</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/java.webp" alt="JavaScript Applications" /></a>
-									<p>JavaScript has become a cornerstone of modern web development. I embarked on a journey to build real-world applications using frameworks like React and Node.js. This experience taught me not only how to code but also how to think critically about problem-solving and user engagement, ultimately leading to more effective and enjoyable applications.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
+								</div>
+								
+								<a href="https://ww5.msu.ac.zw/" class="image fit">
+									<img src="images/website.jpg" alt="Midlands State University Campus" />
+									<br>
+									<figcaption>Midlands State University Campus</figcaption>
+								</a>
+							</div>
+						</div>
 								</article>		
 							</section>
 
 
-
-
-
-
-
-
-							<div class="wrapper style2">
-								<div class="inner">
-		
-									<!-- Feature 2 -->
-									<section class="container box feature2">
-										<div class="row">
-											<div class="col-6 col-12-medium">
-												<section>
-													<header class="major">
-														<h2>Embracing New Technologies</h2>
-														<p>Staying ahead in the tech world</p>
+					<!-- Projects Showcase Section -->
+				<section id="projects-showcase" class="posts">
+					<article>
+						<header>
+							<h2>Featured Projects</h2>
+							<p class="project-intro">Explore a selection of my most impactful projects. Click "View Project" to dive deeper into each project's details, technologies used, and outcomes achieved. These showcase my expertise in data analysis, machine learning, and software development.</p>
 													</header>
-													<p>In the fast-paced world of technology, embracing new tools and frameworks is crucial for any programmer. I continually explore emerging technologies, from the latest programming languages to innovative development methodologies. This commitment to lifelong learning ensures I remain adaptable and equipped to tackle the challenges of tomorrow.</p>
-													<footer>
-														<a href="#" class="button medium icon solid fa-arrow-circle-right">Explore More</a>
-													</footer>
-												</section>
+						<div class="row g-4">
+							<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+								<div class="service-item">
+									<div class="icon-box">
+										<i class="fa fa-chart-line text-primary fs-4"></i>
+									</div>
+									<h4>Customer Segmentation Recommendation System</h4>
+									<p>Machine learning model predicting student performance using Python, Pandas, and Scikit-learn for data analysis and visualization.</p>
+									<a class="btn" href="https://github.com/mboecreator/Customer-Segmentation-Recommendation-System.git"><i class="fa fa-code text-primary me-3"></i>View Project</a>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+								<div class="service-item">
+									<div class="icon-box">
+										<i class="fa fa-chart-bar text-primary fs-4"></i>
+									</div>
+									<h4>Data Visualization <br> PowerBI</h4>
+									<p>Interactive PowerBI dashboard analyzing university enrollment data and student demographics with dynamic visualizations.</p>
+									<a class="btn" href="https://github.com/mboecreator/Data-Visualisation.git"><i class="fa fa-code text-primary me-3"></i>View Project</a>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+								<div class="service-item">
+									<div class="icon-box">
+										<i class="fa fa-database text-primary fs-4"></i>
+									</div>
+									<h4>Database Management</h4>
+									<p>Implemented complex database systems using MySQL and MongoDB for efficient data storage and retrieval.</p>
+									<a class="btn" href="https://github.com/mboecreator/Database-Management-.git"><i class="fa fa-code text-primary me-3"></i>View Project</a>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+								<div class="service-item">
+									<div class="icon-box">
+										<i class="fa fa-code text-primary fs-4"></i>
 											</div>
-											<div class="col-6 col-12-medium">
-												<section>
-													<header class="major">
-														<h2>Collaborative <br> Projects</h2>
-														<p>Working together for greater impact</p>
-													</header>
-													<p>Collaboration is at the heart of successful programming. I actively participate in open-source projects and team-based initiatives that allow me to work with diverse groups of talented individuals. These experiences not only enhance my technical skills but also enrich my understanding of teamwork and communication in software development.</p>
-													<footer>
-														<a href="#" class="button medium alt icon solid fa-info-circle">Join the Journey</a>
-													</footer>
-												</section>
+									<h4>Web Development</h4>
+									<p>Created responsive websites using HTML, CSS, and JavaScript with modern design principles and best practices.</p>
+									<a class="btn" href="https://github.com/mboecreator/pamusika_website.git"><i class="fa fa-code text-primary me-3"></i>View Project</a>
 											</div>
 										</div>
-									</section>
-		
+							<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+								<div class="service-item">
+									<div class="icon-box">
+										<i class="fa fa-robot text-primary fs-4"></i>
+									</div>
+									<h4>AI Applications</h4>
+									<p>Developed AI-powered applications using TensorFlow for practical problem-solving and automation.</p>
+									<a class="btn" href="https://github.com/mboecreator/Health-Chatbot.git"><i class="fa fa-code text-primary me-3"></i>View Project</a>
 									</div>
 							</div>
+							<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+								<div class="service-item">
+									<div class="icon-box">
+										<i class="fa fa-brain text-primary fs-4"></i>
+									</div>
+									<h4>Machine Learning Research</h4>
+									<p>Research on machine learning algorithms focusing on predictive modeling and pattern recognition in real-world scenarios.</p>
+									<a class="btn" href="https://github.com/mboecreator"><i class="fa fa-code text-primary me-3"></i>View Project</a>
+								</div>
+							</div>
+						</div>
+					</article>
+				</section>
+
+
+			
 
 
 
-
-
-
-							<div class="wrapper style3">
-								<div class="inner">
-									<div class="container">
-										<div class="row">
-											<div class="col-8 col-12-medium">
-		
-												<!-- Article list -->
-													<section class="box article-list">
-														<h2 class="icon fa-file-alt">Recent Posts</h2>
-		
-														<!-- Excerpt -->
-															<article class="box excerpt">
-																<a href="#" class="image left"><img src="images/pic04.jpg" alt="" /></a>
-																<div>
-																	<header>
-																		<span class="date">July 24</span>
-																		<h3><a href="#">Repairing a hyperspace window</a></h3>
-																	</header>
-																	<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus
-																	semper mod quisturpis nisi consequat etiam lorem. Phasellus quam turpis,
-																	feugiat et sit amet ornare in, hendrerit in lectus semper mod quis eget mi dolore.</p>
-																</div>
-															</article>
-		
-														<!-- Excerpt -->
-															<article class="box excerpt">
-																<a href="#" class="image left"><img src="images/pic05.jpg" alt="" /></a>
-																<div>
-																	<header>
-																		<span class="date">July 18</span>
-																		<h3><a href="#">Adventuring with a knee injury</a></h3>
-																	</header>
-																	<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus
-																	semper mod quisturpis nisi consequat etiam lorem. Phasellus quam turpis,
-																	feugiat et sit amet ornare in, hendrerit in lectus semper mod quis eget mi dolore.</p>
-																</div>
-															</article>
-		
-														<!-- Excerpt -->
-															<article class="box excerpt">
-																<a href="#" class="image left"><img src="images/pic06.jpg" alt="" /></a>
-																<div>
-																	<header>
-																		<span class="date">July 14</span>
-																		<h3><a href="#">Preparing for Y2K38</a></h3>
-																	</header>
-																	<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus
-																	semper mod quisturpis nisi consequat etiam lorem. Phasellus quam turpis,
-																	feugiat et sit amet ornare in, hendrerit in lectus semper mod quis eget mi dolore.</p>
-																</div>
-															</article>
-		
-													</section>
-											</div>
-											<div class="col-4 col-12-medium">
-		
-												<!-- Spotlight -->
-													<section class="box spotlight">
-														<h2 class="icon fa-file-alt">Spotlight</h2>
-														<article>
-															<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" style="width: 250px; height: auto;"></a>
+				<!-- Academic Skills Section -->
+				<section id="skills" class="skills-section">
+					<article class="skills-content">
 															<header>
-																<h3><a href="#">Neural Implants</a></h3>
-																<p>The pros and cons. Mostly cons.</p>
+							<h2>Academic Skills</h2>
 															</header>
-															<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus semper mod
-															quisturpis nisi consequat ornare in, hendrerit in lectus semper mod quis eget mi quat etiam
-															et tempus consequat etiam,quisturpis nisi consequat ornare.</p>
-															<p>Lorem ipsum dolor quam turpis, feugiat sit amet ornare in, hendrerit in lectus semper
-															mod quisturpis nisi consequat etiam lorem sed amet quam turpis. hendrerit in lectus semper mod
-															quisturpis nisi consequat ornare in, hendrerit in lectus semper mod quis eget mi quat etiam
-															et tempus consequat etiam,quisturpis nisi consequat ornare</p>
-															<footer>
-																<a href="#" class="button alt icon solid fa-file-alt">Continue Reading</a>
-															</footer>
-														</article>
-													</section>
-		
+						<div class="skills-grid">
+							<!-- Technical Expertise -->
+							<div class="skill-category">
+								<h3>Technical Expertise</h3>
+								<div class="skill-items">
+									<div class="skill-item">
+										<i class="fas fa-code"></i>
+										<span>Programming Languages</span>
+										<p>Python, R, SQL</p>
+									</div>
+									<div class="skill-item">
+										<i class="fas fa-database"></i>
+										<span>Data Management</span>
+										<p>MySQL, MongoDB</p>
+									</div>
+									<div class="skill-item">
+										<i class="fas fa-chart-line"></i>
+										<span>Data Analysis</span>
+										<p>Pandas, NumPy, Matplotlib</p>
+									</div>
+									<div class="skill-item">
+										<i class="fas fa-brain"></i>
+										<span>Machine Learning</span>
+										<p>Scikit-learn, TensorFlow</p>
+									</div>
+									<div class="skill-item">
+										<i class="fas fa-cloud"></i>
+										<span>Cloud Computing</span>
+										<p>AWS, Azure services</p>
+									</div>
+									<div class="skill-item">
+										<i class="fas fa-laptop-code"></i>
+										<span>Web Development</span>
+										<p>HTML, CSS, JavaScript</p>
+									</div>
+								</div>
+														</div>
+							
+							<!-- Analytical Skills -->
+							<div class="skill-category">
+								<h3>Analytical Skills</h3>
+								<div class="skill-items">
+									<div class="skill-item">
+										<i class="fas fa-chart-bar"></i>
+										<span>Statistical Analysis</span>
+										<p> Advanced statistical methods</p>
+									</div>
+									<div class="skill-item">
+										<i class="fas fa-search"></i>
+										<span>Data Mining</span>
+										<p>  Pattern recognition &amp; extraction</p>
+									</div>
+									<div class="skill-item">
+										<i class="fas fa-lightbulb"></i>
+										<span>Problem Solving</span>
+										<p>  Algorithmic thinking</p>
+									</div>
+									<div class="skill-item">
+										<i class="fas fa-project-diagram"></i>
+										<span>Research Methodology</span>
+										<p>  Scientific approach</p>
+									</div>
+									<div class="skill-item">
+										<i class="fas fa-calculator"></i>
+										<span>Quantitative Analysis</span>
+										<p>Mathematical modeling</p>
+									</div>
+									<div class="skill-item">
+										<i class="fas fa-microscope"></i>
+										<span>Data Interpretation</span>
+										<p>Analytical insights</p>
+									</div>
+								</div>
+														</div>
+							
+							<!-- Professional Skills -->
+							<div class="skill-category">
+								<h3>Professional Skills</h3>
+								<div class="skill-items">
+									<div class="skill-item">
+										<i class="fas fa-users"></i>
+										<span>Team Collaboration</span>
+										<p>Project coordination</p>
+									</div>
+									<div class="skill-item">
+										<i class="fas fa-pen-fancy"></i>
+										<span>Academic Writing</span>
+										<p>Research papers &amp; reports</p>
+														</div>
+									<div class="skill-item">
+										<i class="fas fa-comments"></i>
+										<span>Presentation Skills</span>
+										<p>Technical communication</p>
 											</div>
+									<div class="skill-item">
+										<i class="fas fa-cogs"></i>
+										<span>Critical Thinking</span>
+										<p>Analytical reasoning</p>
+											</div>
+									<div class="skill-item">
+										<i class="fas fa-tasks"></i>
+										<span>Project Management</span>
+										<p>Timeline optimization</p>
 										</div>
+									<div class="skill-item">
+										<i class="fas fa-chalkboard-teacher"></i>
+										<span>Leadership</span>
+										<p>Team guidance</p>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
+					</article>
+				</section>
 
-
-
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
+				<!-- About Me Section -->
+				<section id="about" class="posts">
+					<article>
+						<header>
+							<h2>About Me</h2>
+						</header>
+						<div class="row align-items-center" style="margin-top: 2rem;">
+							<div class="col-md-4 text-center">
+								<img src="images/WhatsApp_Image_2025-03-15_at_19.51.14-removebg-preview.png" alt="Mbongeni Nsingo" style="width: 200px; height: 200px; object-fit: contain; border-radius: 50%; margin-bottom: 2rem; border: 5px solid #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
 									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
+							<div class="col-md-8">
+								<p style="font-size: 1.1rem; line-height: 1.8; color: #34495e;">
+									I am a passionate Data Science student at Midlands State University, with a strong foundation in both technical and professional skills. My journey in technology is driven by a desire to solve complex problems and create meaningful solutions.
+								</p>
+								<div class="row mt-4">
+									<div class="col-md-6">
+										<h4 style="color: #2c3e50; margin-bottom: 1rem;"><i class="fas fa-graduation-cap"></i> Education</h4>
+										<p style="color: #34495e;">BSc in Data Science<br>Midlands State University</p>
 									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
+									<div class="col-md-6">
+										<h4 style="color: #2c3e50; margin-bottom: 1rem;"><i class="fas fa-briefcase"></i> Experience</h4>
+										<p style="color: #34495e;">Data Analysis Projects<br>Web Development</p>
 									</div>
 								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-						</section>
-						<section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p>Bulawayo City <br> Richmond 2nd Street 2100 </p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p>0713630190/ 0779974493</p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="mbongeninsingo84@gmail.com">mbongeninsingo84@gmail.com</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
-
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>Untitled</li><li>Design: <a href="mbongeninsingo84gmail.com"> <strong>MBONGENI NSINGO E</strong></a></li></ul>
-					</div>
-
+								<div class="mt-4">
+									<a href="contact.html" class="button large" style="background: linear-gradient(45deg, #2c3e50, #3498db); color: white; padding: 1rem 2rem; border-radius: 30px; text-decoration: none; display: inline-block; transition: transform 0.3s ease;">Get in Touch</a>
+								</div>
+							</div>
+						</div>
+					</article>
+				</section>
+				<br>
+				<br>
+				<h5>Created by <a href="#">Mbongeni Nsingo E </a></h5>
+				<ul class="icons">
+					<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="https://www.facebook.com/profile.php?id=100078032067756" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="https://www.linkedin.com/in/mbongeni-nsingo-456912291" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://github.com/mboecreator" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+				</ul>
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
+			<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+			<script>
+				new WOW().init();
+			</script>
 	</body>
 </html>
