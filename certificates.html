@@ -1,0 +1,490 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>MBONGENI NSINGO - Certificates</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Certificate Section Styles */
+			.certificate-section {
+				padding: 80px 0;
+			}
+
+			.certificate-card {
+				background: #fff;
+				border-radius: 10px;
+				box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+				padding: 30px;
+				margin-bottom: 30px;
+				transition: transform 0.3s ease;
+			}
+
+			.certificate-card:hover {
+				transform: translateY(-5px);
+			}
+
+			.certificate-header {
+				display: flex;
+				align-items: center;
+				margin-bottom: 20px;
+			}
+
+			.certificate-icon {
+				width: 60px;
+				height: 60px;
+				background: linear-gradient(45deg, #0d6efd, #0099ff);
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-right: 20px;
+			}
+
+			.certificate-icon i {
+				font-size: 24px;
+				color: #fff;
+			}
+
+			.certificate-title {
+				font-size: 1.5rem;
+				font-weight: 600;
+				color: #212529;
+				margin-bottom: 5px;
+			}
+
+			.certificate-issuer {
+				color: #6c757d;
+				font-size: 1rem;
+			}
+
+			.certificate-date {
+				color: #0d6efd;
+				font-weight: 500;
+				margin-bottom: 15px;
+			}
+
+			.certificate-description {
+				color: #495057;
+				line-height: 1.6;
+				margin-bottom: 20px;
+			}
+
+			.certificate-image {
+				width: 100%;
+				border-radius: 8px;
+				margin-bottom: 20px;
+				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+			}
+
+			.verify-btn {
+				background: linear-gradient(45deg, #0d6efd, #0099ff);
+				color: #fff;
+				padding: 8px 20px;
+				border-radius: 5px;
+				text-decoration: none;
+				display: inline-block;
+				transition: all 0.3s ease;
+			}
+
+			.verify-btn:hover {
+				background: linear-gradient(45deg, #0099ff, #0d6efd);
+				color: #fff;
+				transform: translateY(-2px);
+			}
+
+			.section-title {
+				text-align: center;
+				margin-bottom: 50px;
+			}
+
+			.section-title h2 {
+				font-size: 2.5rem;
+				font-weight: 700;
+				color: #212529;
+				position: relative;
+				padding-bottom: 20px;
+			}
+
+			.section-title h2:after {
+				content: '';
+				position: absolute;
+				left: 50%;
+				bottom: 0;
+				width: 80px;
+				height: 3px;
+				background: linear-gradient(90deg, #0d6efd, #0099ff);
+				transform: translateX(-50%);
+			}
+
+			/* Footer Styles */
+			#footer {
+				background: linear-gradient(135deg, #2e3141, #1a1c25);
+				color: #ffffff;
+				padding: 4rem 0 2rem;
+				margin-top: 4rem;
+			}
+
+			.footer-content {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				gap: 2rem;
+				margin-bottom: 3rem;
+				max-width: 1200px;
+				margin: 0 auto 3rem;
+				padding: 0 20px;
+			}
+
+			.footer-section {
+				flex: 1;
+				min-width: 250px;
+			}
+
+			.footer-section h3 {
+				color: #ffffff;
+				font-size: 1.2rem;
+				margin-bottom: 1.5rem;
+				position: relative;
+				padding-bottom: 0.5rem;
+			}
+
+			.footer-section h3:after {
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 40px;
+				height: 2px;
+				background: linear-gradient(90deg, #0d6efd, #0099ff);
+			}
+
+			.footer-social {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				display: flex;
+				gap: 1rem;
+			}
+
+			.footer-social a {
+				color: #ffffff;
+				font-size: 1.2rem;
+				transition: all 0.3s ease;
+				display: inline-block;
+				width: 40px;
+				height: 40px;
+				line-height: 40px;
+				text-align: center;
+				background: rgba(255, 255, 255, 0.1);
+				border-radius: 50%;
+			}
+
+			.footer-social a:hover {
+				color: #0d6efd;
+				transform: translateY(-3px);
+				background: rgba(255, 255, 255, 0.2);
+			}
+
+			.footer-links {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+
+			.footer-links li {
+				margin-bottom: 0.8rem;
+			}
+
+			.footer-links a {
+				color: #ffffff;
+				text-decoration: none;
+				transition: all 0.3s ease;
+				opacity: 0.8;
+			}
+
+			.footer-links a:hover {
+				color: #0d6efd;
+				padding-left: 5px;
+				opacity: 1;
+			}
+
+			.footer-contact {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+
+			.footer-contact li {
+				margin-bottom: 1rem;
+				display: flex;
+				align-items: center;
+				gap: 0.8rem;
+				opacity: 0.8;
+			}
+
+			.footer-contact i {
+				color: #0d6efd;
+				font-size: 1.1rem;
+			}
+
+			.footer-bottom {
+				text-align: center;
+				padding-top: 2rem;
+				border-top: 1px solid rgba(255, 255, 255, 0.1);
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 2rem 20px 0;
+			}
+
+			.footer-bottom p {
+				margin: 0.5rem 0;
+				color: #ffffff;
+				font-size: 0.9rem;
+				opacity: 0.8;
+			}
+
+			.footer-bottom a {
+				color: #0d6efd;
+				text-decoration: none;
+				transition: all 0.3s ease;
+			}
+
+			.footer-bottom a:hover {
+				color: #0099ff;
+			}
+
+			@media (max-width: 768px) {
+				.footer-content {
+					flex-direction: column;
+					gap: 2rem;
+				}
+
+				.footer-section {
+					width: 100%;
+				}
+
+				.footer-section h3 {
+					text-align: center;
+				}
+
+				.footer-section h3:after {
+					left: 50%;
+					transform: translateX(-50%);
+				}
+
+				.footer-social {
+					justify-content: center;
+				}
+
+				.footer-links {
+					text-align: center;
+				}
+
+				.footer-contact {
+					text-align: center;
+				}
+
+				.footer-contact li {
+					justify-content: center;
+				}
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+		<div id="wrapper" class="fade-in">
+			<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="logo">Student Portfolio</a>
+			</header>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="index.html">PROFILE</a></li>
+					<li><a href="index.html#education">EDUCATION</a></li>
+					<li><a href="skills.html">SKILLS</a></li>
+					<li><a href="index.html#projects-showcase">PROJECTS</a></li>
+					<li><a href="index.html#about">ABOUT</a></li>
+					<li class="active"><a href="certificates.html">CERTIFICATES</a></li>
+					<li><a href="contact.html">CONTACT</a></li>
+				</ul>
+				<ul class="icons">
+					<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="https://www.facebook.com/profile.php?id=100078032067756" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="https://www.linkedin.com/in/mbongeni-nsingo-456912291" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://github.com/mboecreator" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+				</ul>
+			</nav>
+
+			<!-- Main -->
+			<div id="main">
+				<section class="certificate-section">
+					<div class="container">
+						<div class="section-title">
+							<h2>My Certificates</h2>
+						</div>
+						<div class="row">
+							<!-- MySQL Certificate -->
+							<div class="col-lg-6">
+								<div class="certificate-card">
+									<div class="certificate-header">
+										<div class="certificate-icon">
+											<i class="fas fa-database"></i>
+										</div>
+										<div>
+											<h3 class="certificate-title">MySQL for <br> Beginners</h3>
+											<p class="certificate-issuer">Alison</p>
+										</div>
+									</div>
+									<p class="certificate-date">Issued: 2025</p>
+									<p class="certificate-description">
+										Completed comprehensive training in MySQL database fundamentals, including database design, SQL queries, and database management.
+									</p>
+									<img src="images/MySql.jpg" alt="MySQL Certificate" class="certificate-image">
+									<a href="https://alison.com/certification/check/_2d9c2f6d-0b0c-4f0a-9b0a-0b0c4f0a9b0a" class="verify-btn" target="_blank" rel="noopener noreferrer">Verify Certificate</a>
+								</div>
+							</div>
+
+
+							<div class="col-lg-6">
+								<div class="certificate-card">
+									<div class="certificate-header">
+										<div class="certificate-icon">
+											<i class="fas fa-shield-alt"></i>
+										</div>
+										<div>
+											<h3 class="certificate-title">Cyber Security <br> Diploma</h3>
+											<p class="certificate-issuer">Alison</p>
+										</div>
+									</div>
+									<p class="certificate-date">Issued: 2025</p>
+									<p class="certificate-description">
+										Completed a comprehensive diploma course in Cyber Security, covering topics like network security, threat detection, encryption, and ethical hacking.
+									</p>
+									<img src="images/CyberSecurity-2.jpg" alt="Cyber Security Diploma" class="certificate-image">
+									<a href="https://alison.com/certification/check/_2d9c2f6d-0b0c-4f0a-9b0a-0b0c4f0a9b0a" class="verify-btn" target="_blank" rel="noopener noreferrer">Verify Certificate</a>
+								</div>
+							</div>
+							
+							<div class="col-lg-6">
+								<div class="certificate-card">
+								  <div class="certificate-header">
+									<div class="certificate-icon">
+									  <i class="fas fa-shield-alt"></i>
+									</div>
+									<div>
+									  <h3 class="certificate-title">Python Fundamentals <br> Diploma</h3>
+									  <p class="certificate-issuer">Alison</p>
+									</div>
+								  </div>
+								  <p class="certificate-date">Issued: 2025</p>
+								  <p class="certificate-description">
+									Completed a comprehensive diploma course in Python Fundamentals, covering topics like core syntax, data structures, functions, object-oriented programming, and basic libraries.
+								  </p>
+								  <img src="images/PythonFundamentals (1).png" alt="Python Fundamentals Diploma" class="certificate-image">
+								  <a href="https://alison.com/certification/check/_2d9c2f6d-0b0c-4f0a-9b0a-0b0c4f0a9b0a" class="verify-btn" target="_blank" rel="noopener noreferrer">Verify Certificate</a>
+								</div>
+							  </div>
+							  
+
+							<!-- Python Certificate -->
+							<div class="col-lg-6">
+								<div class="certificate-card">
+									<div class="certificate-header">
+										<div class="certificate-icon">
+											<i class="fab fa-python"></i>
+										</div>
+										<div>
+											<h3 class="certificate-title">Python 101 for Data Science</h3>
+											<p class="certificate-issuer">IBM</p>
+										</div>
+									</div>
+									<p class="certificate-date">Issued: 2024</p>
+									<p class="certificate-description">
+										Mastered Python programming fundamentals for data science, including data manipulation, analysis, and visualization techniques.
+									</p>
+									<img src="images/python.png" alt="Python Certificate" class="certificate-image">
+									<a href="https://www.credly.com/badges/YOUR-BADGE-ID" class="verify-btn" target="_blank" rel="noopener noreferrer">Verify Certificate</a>
+								</div>
+							</div>
+
+							<!-- AI & ML Certificate -->
+							<div class="col-lg-6">
+								<div class="certificate-card">
+									<div class="certificate-header">
+										<div class="certificate-icon">
+											<i class="fas fa-brain"></i>
+										</div>
+										<div>
+											<h3 class="certificate-title">Artificial Intelligence and Machine Learning in Business</h3>
+											<p class="certificate-issuer">Alison</p>
+										</div>
+									</div>
+									<p class="certificate-date">Issued: 2025</p>
+									<p class="certificate-description">
+										Acquired knowledge in AI and ML applications in business, including predictive analytics, natural language processing, and business intelligence.
+									</p>
+									<img src="images/Artificial Intelligence.jpg" alt="AI & ML Certificate" class="certificate-image">
+									<a href="https://alison.com/certification/check/_2d9c2f6d-0b0c-4f0a-9b0a-0b0c4f0a9b0a" class="verify-btn" target="_blank" rel="noopener noreferrer">Verify Certificate</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<div class="footer-content">
+						<div class="footer-section">
+							<h3>Connect With Me</h3>
+							<ul class="footer-social">
+								<li><a href="https://www.facebook.com/profile.php?id=100078032067756" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="https://www.linkedin.com/in/mbongeni-nsingo-456912291" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/mboecreator" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							</ul>
+						</div>
+						<div class="footer-section">
+							<h3>Quick Links</h3>
+							<ul class="footer-links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="index.html#education">Education</a></li>
+								<li><a href="skills.html">Skills</a></li>
+								<li><a href="index.html#projects-showcase">Projects</a></li>
+								<li><a href="certificates.html">Certificates</a></li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+						</div>
+						<div class="footer-section">
+							<h3>Contact Info</h3>
+							<ul class="footer-contact">
+								<li><i class="fas fa-envelope"></i> mbongeninsingo@gmail.com</li>
+								<li><i class="fas fa-map-marker-alt"></i> Midlands State University, Zimbabwe</li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer-bottom">
+						<p>&copy; 2025 MBONGENI NSINGO. All Rights Reserved.</p>
+						<p>Designed with <i class="fas fa-heart" style="color: #ff0000;"></i> by <a href="#">Mbongeni Nsingo</a></p>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+	</body>
+</html> 
