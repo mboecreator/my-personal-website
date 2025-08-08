@@ -1,0 +1,370 @@
+/* Mobile-specific styles for Certificates Page */
+@media screen and (max-width: 768px) {
+    
+    /* Certificate Section Mobile */
+    .certificate-section {
+        padding: 2rem 1rem !important;
+    }
+    
+    .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+    
+    .section-title {
+        text-align: center !important;
+        margin-bottom: 3rem !important;
+    }
+    
+    .section-title h2 {
+        font-size: 2rem !important;
+        margin-bottom: 1rem !important;
+        color: #2c3e50 !important;
+        line-height: 1.2 !important;
+    }
+    
+    .section-title h2:after {
+        width: 60px !important;
+        height: 3px !important;
+    }
+    
+    /* Certificate Cards Mobile Layout */
+    .row {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2rem !important;
+    }
+    
+    .col-lg-6 {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    /* Certificate Card Mobile Styles */
+    .certificate-card {
+        background: white !important;
+        border-radius: 15px !important;
+        padding: 2rem 1.5rem !important;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1) !important;
+        border: 1px solid rgba(0, 0, 0, 0.05) !important;
+        transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+        margin-bottom: 2rem !important;
+    }
+    
+    .certificate-card:hover {
+        transform: translateY(-5px) !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+    }
+    
+    /* Certificate Header Mobile */
+    .certificate-header {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .certificate-icon {
+        width: 60px !important;
+        height: 60px !important;
+        background: linear-gradient(45deg, #0d6efd, #0099ff) !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 auto 1rem !important;
+    }
+    
+    .certificate-icon i {
+        font-size: 1.5rem !important;
+        color: white !important;
+    }
+    
+    .certificate-title {
+        font-size: 1.3rem !important;
+        font-weight: 600 !important;
+        color: #2c3e50 !important;
+        margin-bottom: 0.5rem !important;
+        text-align: center !important;
+        line-height: 1.3 !important;
+    }
+    
+    .certificate-issuer {
+        color: #6c757d !important;
+        font-size: 1rem !important;
+        text-align: center !important;
+        font-weight: 500 !important;
+    }
+    
+    /* Certificate Details Mobile */
+    .certificate-date {
+        color: #0d6efd !important;
+        font-weight: 600 !important;
+        margin-bottom: 1rem !important;
+        text-align: center !important;
+        font-size: 0.95rem !important;
+    }
+    
+    .certificate-description {
+        color: #495057 !important;
+        line-height: 1.6 !important;
+        margin-bottom: 1.5rem !important;
+        text-align: center !important;
+        font-size: 0.95rem !important;
+    }
+    
+    /* Certificate Image Mobile */
+    .certificate-image {
+        width: 100% !important;
+        max-width: 300px !important;
+        height: auto !important;
+        border-radius: 10px !important;
+        margin: 0 auto 1.5rem !important;
+        display: block !important;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1) !important;
+        transition: transform 0.3s ease !important;
+    }
+    
+    .certificate-image:hover {
+        transform: scale(1.02) !important;
+    }
+    
+    /* Verify Button Mobile */
+    .verify-btn {
+        display: block !important;
+        width: 100% !important;
+        max-width: 200px !important;
+        margin: 0 auto !important;
+        background: linear-gradient(45deg, #0d6efd, #0099ff) !important;
+        color: white !important;
+        padding: 1rem 1.5rem !important;
+        border-radius: 25px !important;
+        text-decoration: none !important;
+        font-weight: 600 !important;
+        text-align: center !important;
+        transition: all 0.3s ease !important;
+        font-size: 0.95rem !important;
+    }
+    
+    .verify-btn:hover {
+        background: linear-gradient(45deg, #0056b3, #007acc) !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3) !important;
+        color: white !important;
+    }
+    
+    .verify-btn i {
+        margin-right: 0.5rem !important;
+    }
+    
+    /* Footer Mobile Styles */
+    #footer {
+        background: linear-gradient(135deg, #2e3141, #1a1c25) !important;
+        color: #ffffff !important;
+        padding: 3rem 0 2rem !important;
+        margin-top: 3rem !important;
+    }
+    
+    .footer-content {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2rem !important;
+        margin-bottom: 2rem !important;
+        padding: 0 1rem !important;
+    }
+    
+    .footer-section {
+        text-align: center !important;
+        min-width: auto !important;
+    }
+    
+    .footer-section h3 {
+        font-size: 1.1rem !important;
+        margin-bottom: 1rem !important;
+        color: #ffffff !important;
+    }
+    
+    .footer-social {
+        display: flex !important;
+        justify-content: center !important;
+        gap: 1rem !important;
+        list-style: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .footer-social li a {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 40px !important;
+        height: 40px !important;
+        background: rgba(255, 255, 255, 0.1) !important;
+        color: #ffffff !important;
+        border-radius: 50% !important;
+        text-decoration: none !important;
+        transition: all 0.3s ease !important;
+        font-size: 1rem !important;
+    }
+    
+    .footer-social li a:hover {
+        background: rgba(255, 255, 255, 0.2) !important;
+        transform: translateY(-2px) !important;
+    }
+    
+    .footer-links {
+        list-style: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .footer-links li {
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .footer-links li a {
+        color: #cccccc !important;
+        text-decoration: none !important;
+        font-size: 0.9rem !important;
+        transition: color 0.3s ease !important;
+    }
+    
+    .footer-links li a:hover {
+        color: #ffffff !important;
+    }
+    
+    .footer-contact {
+        list-style: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .footer-contact li {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 0.5rem !important;
+        margin-bottom: 0.5rem !important;
+        font-size: 0.9rem !important;
+        color: #cccccc !important;
+    }
+    
+    .footer-contact li i {
+        color: #0d6efd !important;
+        font-size: 1rem !important;
+    }
+    
+    .footer-bottom {
+        text-align: center !important;
+        padding-top: 2rem !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+        margin-top: 2rem !important;
+    }
+    
+    .footer-bottom p {
+        margin: 0.5rem 0 !important;
+        font-size: 0.85rem !important;
+        color: #cccccc !important;
+    }
+    
+    .footer-bottom a {
+        color: #0d6efd !important;
+        text-decoration: none !important;
+    }
+    
+    .footer-bottom a:hover {
+        color: #ffffff !important;
+    }
+    
+    /* Animation for certificate cards */
+    .certificate-card {
+        opacity: 0 !important;
+        transform: translateY(30px) !important;
+        animation: fadeInUp 0.6s ease forwards !important;
+    }
+    
+    .certificate-card:nth-child(1) { animation-delay: 0.1s !important; }
+    .certificate-card:nth-child(2) { animation-delay: 0.2s !important; }
+    .certificate-card:nth-child(3) { animation-delay: 0.3s !important; }
+    .certificate-card:nth-child(4) { animation-delay: 0.4s !important; }
+    
+    @keyframes fadeInUp {
+        to {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+    }
+}
+
+/* Extra Small Phones */
+@media screen and (max-width: 480px) {
+    
+    .certificate-section {
+        padding: 1rem 0.5rem !important;
+    }
+    
+    .section-title h2 {
+        font-size: 1.7rem !important;
+    }
+    
+    .certificate-card {
+        padding: 1.5rem 1rem !important;
+    }
+    
+    .certificate-title {
+        font-size: 1.1rem !important;
+    }
+    
+    .certificate-icon {
+        width: 50px !important;
+        height: 50px !important;
+    }
+    
+    .certificate-icon i {
+        font-size: 1.2rem !important;
+    }
+    
+    .certificate-image {
+        max-width: 250px !important;
+    }
+    
+    .verify-btn {
+        padding: 0.8rem 1.2rem !important;
+        font-size: 0.9rem !important;
+    }
+    
+    #footer {
+        padding: 2rem 0 1.5rem !important;
+    }
+    
+    .footer-content {
+        padding: 0 0.5rem !important;
+    }
+}
+
+/* Landscape Orientation for Mobile */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    
+    .certificate-section {
+        padding: 1.5rem 1rem !important;
+    }
+    
+    .section-title h2 {
+        font-size: 1.8rem !important;
+    }
+    
+    .row {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 1.5rem !important;
+    }
+    
+    .certificate-card {
+        padding: 1.5rem !important;
+    }
+    
+    .certificate-image {
+        max-width: 200px !important;
+    }
+}

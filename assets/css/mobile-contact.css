@@ -1,0 +1,236 @@
+/* Mobile-specific styles for Contact Page */
+@media screen and (max-width: 768px) {
+    
+    /* Contact Page Mobile Styles */
+    .contact-page {
+        padding: 2rem 1rem !important;
+    }
+    
+    .contact-container {
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+    
+    .contact-header {
+        text-align: center !important;
+        margin-bottom: 2rem !important;
+    }
+    
+    .contact-header h1 {
+        font-size: 2rem !important;
+        margin-bottom: 1rem !important;
+        color: #2c3e50 !important;
+    }
+    
+    .contact-header p {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+        color: #6c757d !important;
+    }
+    
+    /* Contact Info Card Mobile */
+    .contact-info-card {
+        background: #f8f9fa !important;
+        border-radius: 15px !important;
+        padding: 2rem 1.5rem !important;
+        margin-bottom: 2rem !important;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1) !important;
+        text-align: center !important;
+    }
+    
+    .contact-info-card h3 {
+        font-size: 1.3rem !important;
+        margin-bottom: 1.5rem !important;
+        color: #2c3e50 !important;
+    }
+    
+    .contact-info {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1rem !important;
+        align-items: center !important;
+    }
+    
+    .contact-info p {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 0.5rem !important;
+        font-size: 1rem !important;
+        color: #495057 !important;
+        margin: 0 !important;
+        padding: 0.5rem 0 !important;
+    }
+    
+    .contact-info i {
+        font-size: 1.2rem !important;
+        color: #0d6efd !important;
+        min-width: 25px !important;
+    }
+    
+    /* Contact Form Mobile */
+    .contact-form {
+        background: white !important;
+        border-radius: 15px !important;
+        padding: 2rem 1.5rem !important;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1) !important;
+        margin-top: 2rem !important;
+    }
+    
+    .contact-form h3 {
+        font-size: 1.3rem !important;
+        margin-bottom: 1.5rem !important;
+        text-align: center !important;
+        color: #2c3e50 !important;
+    }
+    
+    .form-group {
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .form-group label {
+        display: block !important;
+        margin-bottom: 0.5rem !important;
+        font-weight: 600 !important;
+        color: #2c3e50 !important;
+        font-size: 1rem !important;
+    }
+    
+    .form-control {
+        width: 100% !important;
+        padding: 1rem !important;
+        border: 2px solid #e9ecef !important;
+        border-radius: 10px !important;
+        font-size: 1rem !important;
+        transition: all 0.3s ease !important;
+        background: #f8f9fa !important;
+    }
+    
+    .form-control:focus {
+        border-color: #0d6efd !important;
+        box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25) !important;
+        background: white !important;
+        outline: none !important;
+    }
+    
+    textarea.form-control {
+        min-height: 120px !important;
+        resize: vertical !important;
+    }
+    
+    .btn-submit {
+        width: 100% !important;
+        padding: 1rem 2rem !important;
+        background: linear-gradient(45deg, #0d6efd, #0099ff) !important;
+        color: white !important;
+        border: none !important;
+        border-radius: 10px !important;
+        font-size: 1.1rem !important;
+        font-weight: 600 !important;
+        cursor: pointer !important;
+        transition: all 0.3s ease !important;
+        margin-top: 1rem !important;
+    }
+    
+    .btn-submit:hover {
+        background: linear-gradient(45deg, #0056b3, #007acc) !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3) !important;
+    }
+    
+    /* Social Links Mobile */
+    .social-links {
+        display: flex !important;
+        justify-content: center !important;
+        gap: 1rem !important;
+        margin-top: 2rem !important;
+        padding: 1.5rem 0 !important;
+    }
+    
+    .social-links a {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 50px !important;
+        height: 50px !important;
+        background: linear-gradient(45deg, #0d6efd, #0099ff) !important;
+        color: white !important;
+        border-radius: 50% !important;
+        text-decoration: none !important;
+        transition: all 0.3s ease !important;
+        font-size: 1.2rem !important;
+    }
+    
+    .social-links a:hover {
+        background: linear-gradient(45deg, #0056b3, #007acc) !important;
+        transform: translateY(-3px) scale(1.1) !important;
+        box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3) !important;
+    }
+    
+    /* Form Message Mobile */
+    #formMessage {
+        margin-top: 1rem !important;
+        padding: 1rem !important;
+        border-radius: 10px !important;
+        font-size: 1rem !important;
+        text-align: center !important;
+    }
+    
+    .alert-success {
+        background: #d4edda !important;
+        color: #155724 !important;
+        border: 1px solid #c3e6cb !important;
+    }
+    
+    .alert-danger {
+        background: #f8d7da !important;
+        color: #721c24 !important;
+        border: 1px solid #f5c6cb !important;
+    }
+    
+    /* Row Layout Mobile */
+    .row {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2rem !important;
+    }
+    
+    .col-lg-4,
+    .col-lg-8 {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+/* Extra Small Phones */
+@media screen and (max-width: 480px) {
+    
+    .contact-page {
+        padding: 1rem 0.5rem !important;
+    }
+    
+    .contact-info-card,
+    .contact-form {
+        padding: 1.5rem 1rem !important;
+    }
+    
+    .contact-header h1 {
+        font-size: 1.7rem !important;
+    }
+    
+    .form-control {
+        padding: 0.8rem !important;
+        font-size: 0.95rem !important;
+    }
+    
+    .btn-submit {
+        padding: 0.8rem 1.5rem !important;
+        font-size: 1rem !important;
+    }
+    
+    .social-links a {
+        width: 45px !important;
+        height: 45px !important;
+        font-size: 1.1rem !important;
+    }
+}
