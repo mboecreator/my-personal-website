@@ -1,8 +1,35 @@
 // Mobile Menu Toggle Functionality
 document.addEventListener('DOMContentLoaded', function() {
     
+    // Disable the original navPanel system to prevent conflicts
+    function disableOriginalNavPanel() {
+        // Hide the original navPanelToggle
+        const originalToggle = document.getElementById('navPanelToggle');
+        if (originalToggle) {
+            originalToggle.style.display = 'none !important';
+        }
+        
+        // Add CSS to ensure it stays hidden
+        const style = document.createElement('style');
+        style.textContent = `
+            #navPanelToggle {
+                display: none !important;
+            }
+            #navPanel {
+                display: none !important;
+            }
+        `;
+        document.head.appendChild(style);
+    }
+    
     // Create mobile menu toggle button
     function createMobileMenuToggle() {
+        // Check if toggle button already exists
+        const existingToggle = document.querySelector('.mobile-menu-toggle');
+        if (existingToggle) {
+            return existingToggle;
+        }
+        
         const toggleButton = document.createElement('button');
         toggleButton.className = 'mobile-menu-toggle';
         toggleButton.innerHTML = '<i class="fas fa-bars"></i>';
@@ -19,10 +46,18 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize mobile menu
     function initMobileMenu() {
+        // Check if mobile menu is already initialized
+        if (document.querySelector('.mobile-menu-toggle.initialized')) {
+            return;
+        }
+        
         const nav = document.getElementById('nav');
         const toggleButton = createMobileMenuToggle();
         
         if (!nav || !toggleButton) return;
+        
+        // Mark as initialized
+        toggleButton.classList.add('initialized');
         
         let isMenuOpen = false;
         
@@ -204,6 +239,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize all mobile enhancements
     function init() {
+        // Disable original navPanel first
+        disableOriginalNavPanel();
+        
         // Only apply mobile enhancements on mobile devices
         if (window.innerWidth <= 768) {
             initMobileMenu();

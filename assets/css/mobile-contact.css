@@ -1,9 +1,10 @@
-/* Mobile-specific styles for Contact Page */
+/* Professional Mobile Design for Contact Page */
 @media screen and (max-width: 768px) {
     
-    /* Contact Page Mobile Styles */
+    /* Contact Page Mobile Layout */
     .contact-page {
         padding: 2rem 1rem !important;
+        background: #f8f9fa !important;
     }
     
     .contact-container {
@@ -11,43 +12,65 @@
         padding: 0 !important;
     }
     
+    /* Contact Header Mobile */
     .contact-header {
         text-align: center !important;
-        margin-bottom: 2rem !important;
+        margin-bottom: 2.5rem !important;
+        background: white !important;
+        padding: 2rem 1.5rem !important;
+        border-radius: 15px !important;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1) !important;
     }
     
     .contact-header h1 {
-        font-size: 2rem !important;
+        font-size: 2.2rem !important;
         margin-bottom: 1rem !important;
         color: #2c3e50 !important;
+        font-weight: 700 !important;
     }
     
     .contact-header p {
-        font-size: 1rem !important;
+        font-size: 1.1rem !important;
         line-height: 1.6 !important;
         color: #6c757d !important;
+        margin: 0 !important;
+    }
+    
+    /* Stack columns on mobile */
+    .row {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2rem !important;
+    }
+    
+    .col-lg-4,
+    .col-lg-8 {
+        width: 100% !important;
+        max-width: 100% !important;
     }
     
     /* Contact Info Card Mobile */
     .contact-info-card {
-        background: #f8f9fa !important;
+        background: white !important;
         border-radius: 15px !important;
         padding: 2rem 1.5rem !important;
-        margin-bottom: 2rem !important;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1) !important;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+        border: 1px solid rgba(0, 0, 0, 0.05) !important;
         text-align: center !important;
+        margin-bottom: 2rem !important;
     }
     
     .contact-info-card h3 {
-        font-size: 1.3rem !important;
+        font-size: 1.4rem !important;
         margin-bottom: 1.5rem !important;
         color: #2c3e50 !important;
+        font-weight: 600 !important;
     }
     
     .contact-info {
         display: flex !important;
         flex-direction: column !important;
-        gap: 1rem !important;
+        gap: 1.2rem !important;
         align-items: center !important;
     }
     
@@ -55,17 +78,26 @@
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
-        gap: 0.5rem !important;
-        font-size: 1rem !important;
+        gap: 0.8rem !important;
+        font-size: 1.1rem !important;
         color: #495057 !important;
         margin: 0 !important;
-        padding: 0.5rem 0 !important;
+        padding: 1rem 1.5rem !important;
+        background: #f8f9fa !important;
+        border-radius: 10px !important;
+        width: 100% !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    .contact-info p:hover {
+        background: rgba(13, 110, 253, 0.1) !important;
+        transform: translateY(-2px) !important;
     }
     
     .contact-info i {
-        font-size: 1.2rem !important;
+        font-size: 1.3rem !important;
         color: #0d6efd !important;
-        min-width: 25px !important;
+        min-width: 30px !important;
     }
     
     /* Contact Form Mobile */
@@ -73,15 +105,16 @@
         background: white !important;
         border-radius: 15px !important;
         padding: 2rem 1.5rem !important;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1) !important;
-        margin-top: 2rem !important;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+        border: 1px solid rgba(0, 0, 0, 0.05) !important;
     }
     
     .contact-form h3 {
-        font-size: 1.3rem !important;
+        font-size: 1.4rem !important;
         margin-bottom: 1.5rem !important;
         text-align: center !important;
         color: #2c3e50 !important;
+        font-weight: 600 !important;
     }
     
     .form-group {
@@ -98,12 +131,13 @@
     
     .form-control {
         width: 100% !important;
-        padding: 1rem !important;
+        padding: 1rem 1.2rem !important;
         border: 2px solid #e9ecef !important;
         border-radius: 10px !important;
-        font-size: 1rem !important;
+        font-size: 16px !important; /* Prevent zoom on iOS */
         transition: all 0.3s ease !important;
         background: #f8f9fa !important;
+        box-sizing: border-box !important;
     }
     
     .form-control:focus {
@@ -116,64 +150,72 @@
     textarea.form-control {
         min-height: 120px !important;
         resize: vertical !important;
+        font-family: inherit !important;
     }
     
     .btn-submit {
         width: 100% !important;
-        padding: 1rem 2rem !important;
+        padding: 1.2rem 2rem !important;
         background: linear-gradient(45deg, #0d6efd, #0099ff) !important;
         color: white !important;
         border: none !important;
-        border-radius: 10px !important;
+        border-radius: 12px !important;
         font-size: 1.1rem !important;
         font-weight: 600 !important;
         cursor: pointer !important;
         transition: all 0.3s ease !important;
         margin-top: 1rem !important;
+        box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3) !important;
     }
     
     .btn-submit:hover {
         background: linear-gradient(45deg, #0056b3, #007acc) !important;
         transform: translateY(-2px) !important;
-        box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3) !important;
+        box-shadow: 0 6px 20px rgba(13, 110, 253, 0.4) !important;
+    }
+    
+    .btn-submit:active {
+        transform: translateY(0) !important;
     }
     
     /* Social Links Mobile */
     .social-links {
         display: flex !important;
         justify-content: center !important;
-        gap: 1rem !important;
+        gap: 1.2rem !important;
         margin-top: 2rem !important;
-        padding: 1.5rem 0 !important;
+        padding: 2rem 0 !important;
     }
     
     .social-links a {
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
-        width: 50px !important;
-        height: 50px !important;
+        width: 55px !important;
+        height: 55px !important;
         background: linear-gradient(45deg, #0d6efd, #0099ff) !important;
         color: white !important;
         border-radius: 50% !important;
         text-decoration: none !important;
         transition: all 0.3s ease !important;
-        font-size: 1.2rem !important;
+        font-size: 1.3rem !important;
+        box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3) !important;
     }
     
     .social-links a:hover {
         background: linear-gradient(45deg, #0056b3, #007acc) !important;
-        transform: translateY(-3px) scale(1.1) !important;
-        box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3) !important;
+        transform: translateY(-3px) scale(1.05) !important;
+        box-shadow: 0 6px 20px rgba(13, 110, 253, 0.4) !important;
     }
     
     /* Form Message Mobile */
     #formMessage {
         margin-top: 1rem !important;
-        padding: 1rem !important;
+        padding: 1rem 1.2rem !important;
         border-radius: 10px !important;
         font-size: 1rem !important;
         text-align: center !important;
+        font-weight: 500 !important;
     }
     
     .alert-success {
@@ -188,17 +230,44 @@
         border: 1px solid #f5c6cb !important;
     }
     
-    /* Row Layout Mobile */
-    .row {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 2rem !important;
+    /* Professional Contact Section */
+    .contact-cta {
+        background: linear-gradient(135deg, #2c3e50, #3498db) !important;
+        color: white !important;
+        padding: 2rem 1.5rem !important;
+        border-radius: 15px !important;
+        text-align: center !important;
+        margin: 2rem 0 !important;
+        box-shadow: 0 8px 25px rgba(44, 62, 80, 0.2) !important;
     }
     
-    .col-lg-4,
-    .col-lg-8 {
-        width: 100% !important;
-        max-width: 100% !important;
+    .contact-cta h3 {
+        font-size: 1.3rem !important;
+        margin-bottom: 1rem !important;
+        color: white !important;
+    }
+    
+    .contact-cta p {
+        font-size: 1rem !important;
+        margin-bottom: 1.5rem !important;
+        opacity: 0.9 !important;
+    }
+    
+    .contact-cta .btn {
+        background: white !important;
+        color: #2c3e50 !important;
+        padding: 0.8rem 2rem !important;
+        border-radius: 25px !important;
+        text-decoration: none !important;
+        font-weight: 600 !important;
+        transition: all 0.3s ease !important;
+        display: inline-block !important;
+    }
+    
+    .contact-cta .btn:hover {
+        background: #f8f9fa !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3) !important;
     }
 }
 
@@ -206,7 +275,19 @@
 @media screen and (max-width: 480px) {
     
     .contact-page {
-        padding: 1rem 0.5rem !important;
+        padding: 1.5rem 0.5rem !important;
+    }
+    
+    .contact-header {
+        padding: 1.5rem 1rem !important;
+    }
+    
+    .contact-header h1 {
+        font-size: 1.8rem !important;
+    }
+    
+    .contact-header p {
+        font-size: 1rem !important;
     }
     
     .contact-info-card,
@@ -214,23 +295,23 @@
         padding: 1.5rem 1rem !important;
     }
     
-    .contact-header h1 {
-        font-size: 1.7rem !important;
-    }
-    
     .form-control {
-        padding: 0.8rem !important;
-        font-size: 0.95rem !important;
+        padding: 0.9rem 1rem !important;
+        font-size: 16px !important;
     }
     
     .btn-submit {
-        padding: 0.8rem 1.5rem !important;
+        padding: 1rem 1.5rem !important;
         font-size: 1rem !important;
     }
     
     .social-links a {
-        width: 45px !important;
-        height: 45px !important;
-        font-size: 1.1rem !important;
+        width: 50px !important;
+        height: 50px !important;
+        font-size: 1.2rem !important;
+    }
+    
+    .contact-cta {
+        padding: 1.5rem 1rem !important;
     }
 }

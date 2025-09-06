@@ -294,6 +294,125 @@
 					justify-content: center;
 				}
 			}
+
+			/* Portfolio Section Styles */
+			.portfolio-section {
+				padding: 80px 0;
+				background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+			}
+
+			.portfolio-card {
+				background: white;
+				border-radius: 15px;
+				padding: 40px 30px;
+				text-align: center;
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+				transition: all 0.3s ease;
+				margin-bottom: 30px;
+				height: 100%;
+			}
+
+			.portfolio-card:hover {
+				transform: translateY(-10px);
+				box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+			}
+
+			.portfolio-icon {
+				width: 80px;
+				height: 80px;
+				background: linear-gradient(45deg, #0d6efd, #0099ff);
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin: 0 auto 25px;
+				box-shadow: 0 5px 20px rgba(13, 110, 253, 0.3);
+			}
+
+			.portfolio-icon i {
+				font-size: 2rem;
+				color: white;
+			}
+
+			.portfolio-card h3 {
+				font-size: 1.5rem;
+				font-weight: 600;
+				color: #2c3e50;
+				margin-bottom: 15px;
+			}
+
+			.portfolio-card p {
+				color: #6c757d;
+				line-height: 1.6;
+				margin-bottom: 20px;
+			}
+
+			.portfolio-skills {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+
+			.portfolio-skills li {
+				background: #f8f9fa;
+				color: #495057;
+				padding: 8px 15px;
+				margin: 5px 0;
+				border-radius: 20px;
+				font-size: 0.9rem;
+				border-left: 3px solid #0d6efd;
+			}
+
+			.portfolio-cta {
+				background: linear-gradient(135deg, #2c3e50, #3498db);
+				color: white;
+				padding: 50px 30px;
+				border-radius: 15px;
+				text-align: center;
+				margin-top: 50px;
+				box-shadow: 0 10px 30px rgba(44, 62, 80, 0.2);
+			}
+
+			.portfolio-cta h3 {
+				font-size: 1.8rem;
+				margin-bottom: 15px;
+				color: white;
+			}
+
+			.portfolio-cta p {
+				font-size: 1.1rem;
+				margin-bottom: 25px;
+				opacity: 0.9;
+			}
+
+			.cta-btn {
+				background: white;
+				color: #2c3e50;
+				padding: 15px 40px;
+				border-radius: 30px;
+				text-decoration: none;
+				font-weight: 600;
+				font-size: 1.1rem;
+				transition: all 0.3s ease;
+				display: inline-block;
+				box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+			}
+
+			.cta-btn:hover {
+				background: #f8f9fa;
+				transform: translateY(-3px);
+				box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+				color: #2c3e50;
+				text-decoration: none;
+			}
+
+			.section-title p {
+				font-size: 1.1rem;
+				color: #6c757d;
+				max-width: 600px;
+				margin: 0 auto;
+				line-height: 1.6;
+			}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -325,6 +444,68 @@
 
 			<!-- Main -->
 			<div id="main">
+				<!-- Professional Portfolio Section -->
+				<section class="portfolio-section">
+					<div class="container">
+						<div class="section-title">
+							<h2>Professional Portfolio</h2>
+							<p>Showcasing my expertise in Data Science, Machine Learning, and Full-Stack Development through real-world projects and professional achievements.</p>
+						</div>
+						<div class="row">
+							<div class="col-lg-4">
+								<div class="portfolio-card">
+									<div class="portfolio-icon">
+										<i class="fas fa-brain"></i>
+									</div>
+									<h3>Machine Learning & AI</h3>
+									<p>Advanced algorithms, predictive modeling, and artificial intelligence solutions for complex business problems.</p>
+									<ul class="portfolio-skills">
+										<li>Python & R Programming</li>
+										<li>TensorFlow & PyTorch</li>
+										<li>Deep Learning Models</li>
+										<li>Natural Language Processing</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-lg-4">
+								<div class="portfolio-card">
+									<div class="portfolio-icon">
+										<i class="fas fa-chart-line"></i>
+									</div>
+									<h3>Data Science & Analytics</h3>
+									<p>Comprehensive data analysis, statistical modeling, and business intelligence solutions that drive decision-making.</p>
+									<ul class="portfolio-skills">
+										<li>Statistical Analysis</li>
+										<li>Data Visualization</li>
+										<li>Business Intelligence</li>
+										<li>Predictive Analytics</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-lg-4">
+								<div class="portfolio-card">
+									<div class="portfolio-icon">
+										<i class="fas fa-code"></i>
+									</div>
+									<h3>Full-Stack Development</h3>
+									<p>End-to-end web application development with modern technologies and responsive design principles.</p>
+									<ul class="portfolio-skills">
+										<li>HTML, CSS, JavaScript</li>
+										<li>React & Node.js</li>
+										<li>Database Management</li>
+										<li>API Development</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio-cta">
+							<h3>Ready to Collaborate?</h3>
+							<p>Let's discuss how my expertise can contribute to your next project or organization.</p>
+							<a href="contact.html" class="cta-btn">Get in Touch</a>
+						</div>
+					</div>
+				</section>
+
 				<section class="certificate-section">
 					<div class="container">
 						<div class="section-title">

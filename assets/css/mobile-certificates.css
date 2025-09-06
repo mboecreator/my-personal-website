@@ -1,5 +1,153 @@
-/* Mobile-specific styles for Certificates Page */
+/* Professional Mobile Styles for Certificates Page */
 @media screen and (max-width: 768px) {
+    
+    /* Portfolio Section Mobile - Compact Professional Design */
+    .portfolio-section {
+        padding: 1.5rem 1rem !important;
+        background: linear-gradient(135deg, #f8f9fa, #ffffff) !important;
+    }
+    
+    .portfolio-section .section-title {
+        text-align: center !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .portfolio-section .section-title h2 {
+        font-size: 1.6rem !important;
+        margin-bottom: 0.8rem !important;
+        color: #2c3e50 !important;
+        font-weight: 700 !important;
+    }
+    
+    .portfolio-section .section-title p {
+        font-size: 0.95rem !important;
+        color: #6c757d !important;
+        line-height: 1.5 !important;
+        margin: 0 auto !important;
+        max-width: 90% !important;
+    }
+    
+    /* Compact Portfolio Cards */
+    .portfolio-card {
+        background: white !important;
+        border-radius: 12px !important;
+        padding: 1.5rem 1.2rem !important;
+        text-align: center !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08) !important;
+        margin-bottom: 1.2rem !important;
+        transition: all 0.3s ease !important;
+        border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    }
+    
+    .portfolio-card:hover {
+        transform: translateY(-3px) !important;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12) !important;
+    }
+    
+    /* Smaller Icons for Mobile */
+    .portfolio-icon {
+        width: 50px !important;
+        height: 50px !important;
+        background: linear-gradient(45deg, #0d6efd, #0099ff) !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 auto 1rem !important;
+        box-shadow: 0 3px 10px rgba(13, 110, 253, 0.25) !important;
+    }
+    
+    .portfolio-icon i {
+        font-size: 1.3rem !important;
+        color: white !important;
+    }
+    
+    /* Compact Typography */
+    .portfolio-card h3 {
+        font-size: 1.1rem !important;
+        font-weight: 600 !important;
+        color: #2c3e50 !important;
+        margin-bottom: 0.8rem !important;
+        line-height: 1.3 !important;
+    }
+    
+    .portfolio-card p {
+        color: #6c757d !important;
+        line-height: 1.5 !important;
+        margin-bottom: 1rem !important;
+        font-size: 0.9rem !important;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 3 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+    }
+    
+    /* Compact Skills List */
+    .portfolio-skills {
+        list-style: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 0.4rem !important;
+    }
+    
+    .portfolio-skills li {
+        background: rgba(13, 110, 253, 0.08) !important;
+        color: #495057 !important;
+        padding: 0.4rem 0.6rem !important;
+        border-radius: 15px !important;
+        font-size: 0.8rem !important;
+        border-left: 2px solid #0d6efd !important;
+        text-align: center !important;
+        font-weight: 500 !important;
+    }
+    
+    /* Compact CTA Section */
+    .portfolio-cta {
+        background: linear-gradient(135deg, #2c3e50, #3498db) !important;
+        color: white !important;
+        padding: 1.5rem 1.2rem !important;
+        border-radius: 12px !important;
+        text-align: center !important;
+        margin-top: 1.5rem !important;
+        box-shadow: 0 6px 20px rgba(44, 62, 80, 0.15) !important;
+    }
+    
+    .portfolio-cta h3 {
+        font-size: 1.2rem !important;
+        margin-bottom: 0.8rem !important;
+        color: white !important;
+        font-weight: 600 !important;
+    }
+    
+    .portfolio-cta p {
+        font-size: 0.9rem !important;
+        margin-bottom: 1.2rem !important;
+        opacity: 0.9 !important;
+        line-height: 1.4 !important;
+    }
+    
+    .cta-btn {
+        background: white !important;
+        color: #2c3e50 !important;
+        padding: 0.8rem 1.5rem !important;
+        border-radius: 20px !important;
+        text-decoration: none !important;
+        font-weight: 600 !important;
+        font-size: 0.9rem !important;
+        transition: all 0.3s ease !important;
+        display: inline-block !important;
+        box-shadow: 0 3px 10px rgba(255, 255, 255, 0.2) !important;
+    }
+    
+    .cta-btn:hover {
+        background: #f8f9fa !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3) !important;
+        color: #2c3e50 !important;
+        text-decoration: none !important;
+    }
     
     /* Certificate Section Mobile */
     .certificate-section {
@@ -11,9 +159,10 @@
         padding: 0 !important;
     }
     
+    /* Section Title Mobile */
     .section-title {
         text-align: center !important;
-        margin-bottom: 3rem !important;
+        margin-bottom: 2.5rem !important;
     }
     
     .section-title h2 {
@@ -23,12 +172,7 @@
         line-height: 1.2 !important;
     }
     
-    .section-title h2:after {
-        width: 60px !important;
-        height: 3px !important;
-    }
-    
-    /* Certificate Cards Mobile Layout */
+    /* Stack certificate cards on mobile */
     .row {
         display: flex !important;
         flex-direction: column !important;
@@ -40,20 +184,20 @@
         max-width: 100% !important;
     }
     
-    /* Certificate Card Mobile Styles */
+    /* Certificate Card Mobile Styling */
     .certificate-card {
         background: white !important;
         border-radius: 15px !important;
         padding: 2rem 1.5rem !important;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1) !important;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
         border: 1px solid rgba(0, 0, 0, 0.05) !important;
         transition: transform 0.3s ease, box-shadow 0.3s ease !important;
-        margin-bottom: 2rem !important;
+        margin-bottom: 1.5rem !important;
     }
     
     .certificate-card:hover {
         transform: translateY(-5px) !important;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15) !important;
     }
     
     /* Certificate Header Mobile */
@@ -66,24 +210,25 @@
     }
     
     .certificate-icon {
-        width: 60px !important;
-        height: 60px !important;
+        width: 70px !important;
+        height: 70px !important;
         background: linear-gradient(45deg, #0d6efd, #0099ff) !important;
         border-radius: 50% !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
         margin: 0 auto 1rem !important;
+        box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3) !important;
     }
     
     .certificate-icon i {
-        font-size: 1.5rem !important;
+        font-size: 1.8rem !important;
         color: white !important;
     }
     
     .certificate-title {
-        font-size: 1.3rem !important;
-        font-weight: 600 !important;
+        font-size: 1.4rem !important;
+        font-weight: 700 !important;
         color: #2c3e50 !important;
         margin-bottom: 0.5rem !important;
         text-align: center !important;
@@ -92,9 +237,10 @@
     
     .certificate-issuer {
         color: #6c757d !important;
-        font-size: 1rem !important;
+        font-size: 1.1rem !important;
         text-align: center !important;
         font-weight: 500 !important;
+        margin-bottom: 0 !important;
     }
     
     /* Certificate Details Mobile */
@@ -103,40 +249,47 @@
         font-weight: 600 !important;
         margin-bottom: 1rem !important;
         text-align: center !important;
-        font-size: 0.95rem !important;
+        font-size: 1rem !important;
+        background: rgba(13, 110, 253, 0.1) !important;
+        padding: 0.5rem 1rem !important;
+        border-radius: 20px !important;
+        display: inline-block !important;
+        width: 100% !important;
+        text-align: center !important;
     }
     
     .certificate-description {
         color: #495057 !important;
-        line-height: 1.6 !important;
+        line-height: 1.7 !important;
         margin-bottom: 1.5rem !important;
         text-align: center !important;
-        font-size: 0.95rem !important;
+        font-size: 1rem !important;
+        padding: 0 0.5rem !important;
     }
     
     /* Certificate Image Mobile */
     .certificate-image {
         width: 100% !important;
-        max-width: 300px !important;
+        max-width: 280px !important;
         height: auto !important;
-        border-radius: 10px !important;
+        border-radius: 12px !important;
         margin: 0 auto 1.5rem !important;
         display: block !important;
-        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1) !important;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15) !important;
         transition: transform 0.3s ease !important;
     }
     
     .certificate-image:hover {
-        transform: scale(1.02) !important;
+        transform: scale(1.03) !important;
     }
     
     /* Verify Button Mobile */
     .verify-btn {
         display: block !important;
         width: 100% !important;
-        max-width: 200px !important;
+        max-width: 220px !important;
         margin: 0 auto !important;
-        background: linear-gradient(45deg, #0d6efd, #0099ff) !important;
+        background: linear-gradient(45deg, #28a745, #20c997) !important;
         color: white !important;
         padding: 1rem 1.5rem !important;
         border-radius: 25px !important;
@@ -144,14 +297,17 @@
         font-weight: 600 !important;
         text-align: center !important;
         transition: all 0.3s ease !important;
-        font-size: 0.95rem !important;
+        font-size: 1rem !important;
+        border: none !important;
+        box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3) !important;
     }
     
     .verify-btn:hover {
-        background: linear-gradient(45deg, #0056b3, #007acc) !important;
+        background: linear-gradient(45deg, #218838, #1ea085) !important;
         transform: translateY(-2px) !important;
-        box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3) !important;
+        box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4) !important;
         color: white !important;
+        text-decoration: none !important;
     }
     
     .verify-btn i {
@@ -172,15 +328,17 @@
         gap: 2rem !important;
         margin-bottom: 2rem !important;
         padding: 0 1rem !important;
+        max-width: 100% !important;
     }
     
     .footer-section {
         text-align: center !important;
         min-width: auto !important;
+        margin-bottom: 1.5rem !important;
     }
     
     .footer-section h3 {
-        font-size: 1.1rem !important;
+        font-size: 1.2rem !important;
         margin-bottom: 1rem !important;
         color: #ffffff !important;
     }
@@ -198,14 +356,14 @@
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
-        width: 40px !important;
-        height: 40px !important;
+        width: 45px !important;
+        height: 45px !important;
         background: rgba(255, 255, 255, 0.1) !important;
         color: #ffffff !important;
         border-radius: 50% !important;
         text-decoration: none !important;
         transition: all 0.3s ease !important;
-        font-size: 1rem !important;
+        font-size: 1.1rem !important;
     }
     
     .footer-social li a:hover {
@@ -226,7 +384,7 @@
     .footer-links li a {
         color: #cccccc !important;
         text-decoration: none !important;
-        font-size: 0.9rem !important;
+        font-size: 1rem !important;
         transition: color 0.3s ease !important;
     }
     
@@ -246,13 +404,13 @@
         justify-content: center !important;
         gap: 0.5rem !important;
         margin-bottom: 0.5rem !important;
-        font-size: 0.9rem !important;
+        font-size: 1rem !important;
         color: #cccccc !important;
     }
     
     .footer-contact li i {
         color: #0d6efd !important;
-        font-size: 1rem !important;
+        font-size: 1.1rem !important;
     }
     
     .footer-bottom {
@@ -264,7 +422,7 @@
     
     .footer-bottom p {
         margin: 0.5rem 0 !important;
-        font-size: 0.85rem !important;
+        font-size: 0.9rem !important;
         color: #cccccc !important;
     }
     
@@ -276,32 +434,71 @@
     .footer-bottom a:hover {
         color: #ffffff !important;
     }
-    
-    /* Animation for certificate cards */
-    .certificate-card {
-        opacity: 0 !important;
-        transform: translateY(30px) !important;
-        animation: fadeInUp 0.6s ease forwards !important;
-    }
-    
-    .certificate-card:nth-child(1) { animation-delay: 0.1s !important; }
-    .certificate-card:nth-child(2) { animation-delay: 0.2s !important; }
-    .certificate-card:nth-child(3) { animation-delay: 0.3s !important; }
-    .certificate-card:nth-child(4) { animation-delay: 0.4s !important; }
-    
-    @keyframes fadeInUp {
-        to {
-            opacity: 1 !important;
-            transform: translateY(0) !important;
-        }
-    }
 }
 
 /* Extra Small Phones */
 @media screen and (max-width: 480px) {
     
-    .certificate-section {
+    /* Portfolio Section - Extra Small */
+    .portfolio-section {
         padding: 1rem 0.5rem !important;
+    }
+    
+    .portfolio-section .section-title h2 {
+        font-size: 1.4rem !important;
+    }
+    
+    .portfolio-section .section-title p {
+        font-size: 0.85rem !important;
+    }
+    
+    .portfolio-card {
+        padding: 1.2rem 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .portfolio-icon {
+        width: 45px !important;
+        height: 45px !important;
+    }
+    
+    .portfolio-icon i {
+        font-size: 1.1rem !important;
+    }
+    
+    .portfolio-card h3 {
+        font-size: 1rem !important;
+    }
+    
+    .portfolio-card p {
+        font-size: 0.85rem !important;
+    }
+    
+    .portfolio-skills li {
+        font-size: 0.75rem !important;
+        padding: 0.3rem 0.5rem !important;
+    }
+    
+    .portfolio-cta {
+        padding: 1.2rem 1rem !important;
+    }
+    
+    .portfolio-cta h3 {
+        font-size: 1.1rem !important;
+    }
+    
+    .portfolio-cta p {
+        font-size: 0.85rem !important;
+    }
+    
+    .cta-btn {
+        padding: 0.7rem 1.2rem !important;
+        font-size: 0.85rem !important;
+    }
+    
+    /* Certificate Section - Extra Small */
+    .certificate-section {
+        padding: 1.5rem 0.5rem !important;
     }
     
     .section-title h2 {
@@ -313,16 +510,16 @@
     }
     
     .certificate-title {
-        font-size: 1.1rem !important;
+        font-size: 1.2rem !important;
     }
     
     .certificate-icon {
-        width: 50px !important;
-        height: 50px !important;
+        width: 60px !important;
+        height: 60px !important;
     }
     
     .certificate-icon i {
-        font-size: 1.2rem !important;
+        font-size: 1.5rem !important;
     }
     
     .certificate-image {
@@ -330,8 +527,9 @@
     }
     
     .verify-btn {
-        padding: 0.8rem 1.2rem !important;
-        font-size: 0.9rem !important;
+        padding: 0.9rem 1.2rem !important;
+        font-size: 0.95rem !important;
+        max-width: 200px !important;
     }
     
     #footer {
@@ -340,31 +538,5 @@
     
     .footer-content {
         padding: 0 0.5rem !important;
-    }
-}
-
-/* Landscape Orientation for Mobile */
-@media screen and (max-width: 768px) and (orientation: landscape) {
-    
-    .certificate-section {
-        padding: 1.5rem 1rem !important;
-    }
-    
-    .section-title h2 {
-        font-size: 1.8rem !important;
-    }
-    
-    .row {
-        display: grid !important;
-        grid-template-columns: 1fr 1fr !important;
-        gap: 1.5rem !important;
-    }
-    
-    .certificate-card {
-        padding: 1.5rem !important;
-    }
-    
-    .certificate-image {
-        max-width: 200px !important;
     }
 }
